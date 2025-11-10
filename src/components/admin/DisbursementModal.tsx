@@ -42,7 +42,7 @@ export default function DisbursementModal({ open, onOpenChange, loan, onDisburse
 
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/loans/admin/${loan._id}/disburse`, {
+      const response = await fetch(`https://firstintlservices.onrender.com/api/v1/loans/admin/${loan._id}/disburse`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
