@@ -61,6 +61,7 @@ const slides = [
     image:
       "https://i.pinimg.com/736x/20/7f/46/207f468c0034296545c113047915e499.jpg",
     gradient: "from-[#006064] to-[#004d50]",
+    link: "/referral-page",
   },
   {
     title: "Get the best rates on auto loans",
@@ -69,14 +70,17 @@ const slides = [
     image:
       "https://i.pinimg.com/736x/8a/92/d9/8a92d9dbc98fb89d49e071f55f66fde0.jpg",
     gradient: "from-[#004d50] to-[#003d40]",
+    link: "/loans/produts",
   },
   {
-    title: "Open a checking account today",
-    subtitle: "BANKING MADE SIMPLE",
-    cta: "Get Started",
+    title:
+      "Exclusive Rate Discount for Teachers, School Staff & College Faculty",
+    subtitle: "1% Off an Auto or Rec Vehicle Loan",
+    cta: "Learn More",
     image:
       "https://i.pinimg.com/736x/fa/51/6c/fa516cd707c8fba93a20541eec1a8160.jpg",
     gradient: "from-[#006064] to-[#00838f]",
+    link: "/teacher-discount-page",
   },
 ];
 
@@ -184,15 +188,17 @@ const Home: React.FC = () => {
                   {slides[currentSlide].title}
                 </h1>
                 <div className="flex flex-col sm:flex-row gap-3">
+                 <Link to={slides[currentSlide].link}>  
                   <Button className="bg-[#B8D430] hover:bg-[#a0bb28] text-[#006064] font-semibold px-6 py-3 text-base md:text-lg">
                     {slides[currentSlide].cta}
                   </Button>
-                  <Button
+                  </Link>
+                  {/* <Button
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-[#006064] bg-transparent"
                   >
                     Learn More →
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <div className="relative order-1 lg:order-2">
@@ -210,13 +216,13 @@ const Home: React.FC = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="bg-white/20 hover:bg-white/30 text-white rounded-full"
+                className="bg-white/20 hover:bg-white/30 text-white rounded-full hidden sm:flex"
                 onClick={prevSlide}
               >
                 <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
 
-              <div className="flex gap-2">
+              <div className=" gap-2 hidden sm:flex ">
                 {slides.map((_, index) => (
                   <button
                     key={index}
@@ -233,7 +239,7 @@ const Home: React.FC = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="bg-white/20 hover:bg-white/30 text-white rounded-full"
+                className="bg-white/20 hover:bg-white/30 text-white rounded-full hidden sm:flex"
                 onClick={nextSlide}
               >
                 <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -242,7 +248,7 @@ const Home: React.FC = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="bg-white/20 hover:bg-white/30 text-white rounded-full ml-2"
+                className="bg-white/20 hover:bg-white/30 text-white rounded-full ml-2 hidden sm:flex"
                 onClick={toggleAutoplay}
               >
                 {isPlaying ? (

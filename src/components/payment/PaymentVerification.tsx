@@ -64,7 +64,7 @@ export default function PaymentVerification() {
     try {
       console.log('🔄 Verifying payment with token:', token.substring(0, 20) + '...');
 
-      const response = await fetch('https://firstintlservices.onrender.com/api/v1/payments/verify', {
+      const response = await fetch('https://bank-account-backend-hgpt.onrender.com/api/v1/payments/verify', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

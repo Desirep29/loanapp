@@ -67,7 +67,7 @@ export default function LoanPaymentVerification() {
 
       console.log("Submitting payment verification:", requestBody);
 
-      const response = await fetch("https://firstintlservices.onrender.com/api/v1/loans/verify-payment", {
+      const response = await fetch("https://bank-account-backend-hgpt.onrender.com/api/v1/loans/verify-payment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

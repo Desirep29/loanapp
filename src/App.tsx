@@ -35,6 +35,9 @@ import LoanPaymentInstructions from "./components/loan/LoanPaymentInstructions";
 import LoanPaymentVerification from "./components/loan/LoanPaymentVerification";
 import LoanStatus from "./components/loan/LoanStatus";
 import LoanDashboard from "./components/admin/LoanDashboard";
+import MeetOurTeamPage from "./pages/about/MeetOurTeamPage";
+import ReferralPage from "./pages/ReferralPage";
+import TeacherDiscountPage from "./pages/TeacherDiscountPage";
 
 const MainLayout = () => {
   return (
@@ -53,6 +56,9 @@ const App = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/referral-page" element={<ReferralPage />} />
+          <Route path="/teacher-Discount-page" element={<TeacherDiscountPage />} />
+          
           {/* About page */}
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/about/careers" element={<CareersPage />} />
@@ -60,6 +66,7 @@ const App = () => {
           <Route path="/about/join-us" element={<JoinUsPage />} />
           <Route path="/about/locations" element={<BranchesPage />} />
           <Route path="/about/disclosures" element={<DisclosuresPage />} />
+          <Route path="/about/our-team" element={<MeetOurTeamPage />} />
 
           {/* Personal Page */}
           <Route path="/personal/cards" element={<CardsPage />} />

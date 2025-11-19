@@ -45,7 +45,7 @@ export default function ProfileCard() {
         }
 
         const response = await fetch(
-          "https://firstintlservices.onrender.com/api/v1/members/profile",
+          "https://bank-account-backend-hgpt.onrender.com/api/v1/members/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,

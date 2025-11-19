@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     }
 
     try {
-      const response = await fetch("https://firstintlservices.onrender.com/api/v1/members/profile", {
+      const response = await fetch("https://bank-account-backend-hgpt.onrender.com/api/v1/members/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

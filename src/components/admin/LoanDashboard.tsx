@@ -101,7 +101,7 @@ export default function LoanDashboard() {
 
       // Fetch statistics
       const statsResponse = await fetch(
-        "https://firstintlservices.onrender.com/api/v1/loans/admin/statistics",
+        "https://bank-account-backend-hgpt.onrender.com/api/v1/loans/admin/statistics",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -112,7 +112,7 @@ export default function LoanDashboard() {
 
       // Fetch recent loans
       const loansResponse = await fetch(
-        "https://firstintlservices.onrender.com/api/v1/loans/admin/all",
+        "https://bank-account-backend-hgpt.onrender.com/api/v1/loans/admin/all",
         {
           headers: {
             Authorization: `Bearer ${token}`,

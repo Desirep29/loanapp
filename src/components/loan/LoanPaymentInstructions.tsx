@@ -70,7 +70,7 @@ export default function LoanPaymentInstructions() {
         }
 
         // ADD THIS: Use the full backend URL
-        const API_BASE_URL = "https://firstintlservices.onrender.com";
+        const API_BASE_URL = "https://bank-account-backend-hgpt.onrender.com";
 
         const response = await fetch(
           `${API_BASE_URL}/api/v1/loans/${loanId}/payment-instructions`, // CHANGED: Added full URL
