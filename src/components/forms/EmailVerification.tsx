@@ -1,5 +1,4 @@
-// components/Auth/EmailVerification.tsx
-"use client";
+
 
 import { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
