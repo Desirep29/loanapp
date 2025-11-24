@@ -221,7 +221,7 @@ export default function LoansPage() {
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-1 backdrop-blur-sm">
                 <img
-                  src="/happy-couple-keys-modern.jpg"
+                  src="https://i.pinimg.com/736x/85/42/b7/8542b703767a80d739b51a775e0e91b8.jpg"
                   alt="Happy couple with keys"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                 />

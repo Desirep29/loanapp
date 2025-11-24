@@ -226,7 +226,7 @@ export default function SavingsPage() {
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-1 backdrop-blur-sm">
                 <img
-                  src="/piggy-bank-savings-modern.jpg"
+                  src="https://i.pinimg.com/736x/59/79/1b/59791b88f2e59c57537a09f70a7dc67a.jpg"
                   alt="Savings concept with piggy bank and growth chart"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                 />

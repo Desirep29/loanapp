@@ -155,7 +155,7 @@ export default function CheckingPage() {
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-1 backdrop-blur-sm">
                 <img
-                  src="/friends-laughing-outdoor-modern.jpg"
+                  src="https://i.pinimg.com/736x/e7/18/58/e71858cd45bb9542f345faf93f4b1dad.jpg"
                   alt="Friends laughing outdoors"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                 />

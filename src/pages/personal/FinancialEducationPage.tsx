@@ -195,7 +195,7 @@ export default function FinancialEducationPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                  className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
                 >
                   View Workshop Schedule →
                 </Button>
@@ -438,7 +438,7 @@ export default function FinancialEducationPage() {
                 </div>
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/financial-planning-modern-concept.jpg"
+                    src="https://i.pinimg.com/1200x/b6/71/6a/b6716aeb4d28424f6cf24886aa46724c.jpg"
                     alt="Financial planning concept"
                     className="w-full h-64 object-cover rounded-xl"
                   />
@@ -470,7 +470,7 @@ export default function FinancialEducationPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
               >
                 Get Personalized Advice
               </Button>

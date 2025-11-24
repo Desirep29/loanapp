@@ -94,7 +94,7 @@ export default function CardsPage() {
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-1 backdrop-blur-sm">
                 <img
-                  src="/credit-cards-modern-wallet.jpg"
+                  src="https://i.pinimg.com/736x/05/ea/60/05ea607f2d84df6344f2e2149dcdda47.jpg"
                   alt="Credit cards"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                 />
@@ -458,7 +458,7 @@ export default function CardsPage() {
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
               >
                 Order Debit Card
               </Button>
