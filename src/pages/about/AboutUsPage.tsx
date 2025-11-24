@@ -359,7 +359,7 @@ export default function AboutUsPage() {
               <div className="text-center mt-8">
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#006064]"
+                  className="border-white text-[#006064] hover:bg-white hover:text-[#006064]"
                 >
                   Read More Stories
                 </Button>
@@ -385,7 +385,7 @@ export default function AboutUsPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                  className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
                 >
                   Schedule a Tour
                 </Button>

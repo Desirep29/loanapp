@@ -366,7 +366,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                             <SelectContent>
                               {loanTypes.map((type) => (
                                 <SelectItem key={type.value} value={type.value}>
-                                  {type.label} (Up to ₦
+                                  {type.label} (Up to $
                                   {type.maxAmount.toLocaleString()})
                                 </SelectItem>
                               ))}
@@ -382,7 +382,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                       name="loanAmount"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Loan Amount (₦) *</FormLabel>
+                          <FormLabel>Loan Amount ($) *</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -397,7 +397,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                           </FormControl>
                           {selectedLoanType && (
                             <FormDescription>
-                              Maximum: ₦
+                              Maximum: $
                               {selectedLoanType.maxAmount.toLocaleString()}
                             </FormDescription>
                           )}
@@ -489,19 +489,19 @@ const onSubmit = async (data: LoanApplicationData) => {
                           <div>
                             <p className="text-blue-700">Monthly Payment</p>
                             <p className="font-semibold text-lg">
-                              ₦{loanDetails.monthlyPayment.toLocaleString()}
+                              ${loanDetails.monthlyPayment.toLocaleString()}
                             </p>
                           </div>
                           <div>
                             <p className="text-blue-700">Total Payment</p>
                             <p className="font-semibold text-lg">
-                              ₦{loanDetails.totalPayment.toLocaleString()}
+                              ${loanDetails.totalPayment.toLocaleString()}
                             </p>
                           </div>
                           <div>
                             <p className="text-blue-700">Total Interest</p>
                             <p className="font-semibold text-lg">
-                              ₦{loanDetails.totalInterest.toLocaleString()}
+                              ${loanDetails.totalInterest.toLocaleString()}
                             </p>
                           </div>
                         </div>
@@ -663,7 +663,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                       name="monthlyIncome"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Monthly Income (₦) *</FormLabel>
+                          <FormLabel>Monthly Income ($) *</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -715,7 +715,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                       name="monthlyExpenses"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Monthly Expenses (₦) *</FormLabel>
+                          <FormLabel>Monthly Expenses ($) *</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -735,7 +735,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                       name="existingLoans"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Existing Loan Payments (₦) *</FormLabel>
+                          <FormLabel>Existing Loan Payments ($) *</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -831,7 +831,7 @@ const onSubmit = async (data: LoanApplicationData) => {
                         name="collateralValue"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Collateral Value (₦)</FormLabel>
+                            <FormLabel>Collateral Value ($)</FormLabel>
                             <FormControl>
                               <Input
                                 type="number"
@@ -900,19 +900,19 @@ const onSubmit = async (data: LoanApplicationData) => {
                       <div>
                         <p className="text-sm text-gray-600">Loan Amount</p>
                         <p className="font-semibold">
-                          ₦{form.watch("loanAmount")?.toLocaleString()}
+                          ${form.watch("loanAmount")?.toLocaleString()}
                         </p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-600">Monthly Payment</p>
                         <p className="font-semibold">
-                          ₦{loanDetails?.monthlyPayment.toLocaleString()}
+                          ${loanDetails?.monthlyPayment.toLocaleString()}
                         </p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-600">Total Interest</p>
                         <p className="font-semibold">
-                          ₦{loanDetails?.totalInterest.toLocaleString()}
+                          ${loanDetails?.totalInterest.toLocaleString()}
                         </p>
                       </div>
                     </CardContent>

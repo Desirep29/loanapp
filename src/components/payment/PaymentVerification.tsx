@@ -233,7 +233,7 @@ export default function PaymentVerification() {
 
               <div>
                 <label htmlFor="amount" className="block text-sm font-medium text-gray-700 mb-1">
-                  Amount Paid (₦)
+                  Amount Paid ($)
                 </label>
                 <Input
                   id="amount"
@@ -246,7 +246,7 @@ export default function PaymentVerification() {
                   disabled={!localStorage.getItem('authToken')}
                 />
                 <p className="text-xs text-gray-500 mt-1">
-                  Should be exactly ₦5,000
+                  Should be exactly $5,000
                 </p>
               </div>
 

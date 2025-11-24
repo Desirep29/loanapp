@@ -111,7 +111,7 @@ export default function BusinessCheckingPage() {
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-1 backdrop-blur-sm">
                 <img
-                  src="/business-owner-tablet-modern.jpg"
+                  src="https://i.pinimg.com/736x/c9/3f/ab/c93fab9ee5e0ed6d061b076b9565651e.jpg"
                   alt="Business owner with tablet"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                 />
@@ -396,7 +396,7 @@ export default function BusinessCheckingPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
               >
                 Speak with a Business Specialist
               </Button>

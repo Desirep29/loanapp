@@ -321,13 +321,13 @@ export default function LoanStatus() {
                   </div>
                   <div>
                     <p className="text-gray-600">Applied Amount</p>
-                    <p className="font-semibold">₦{loanData.loanAmount.toLocaleString()}</p>
+                    <p className="font-semibold">${loanData.loanAmount.toLocaleString()}</p>
                   </div>
                   <div>
                     <p className="text-gray-600">Approved Amount</p>
                     <p className="font-semibold">
                       {loanData.approvedAmount 
-                        ? `₦${loanData.approvedAmount.toLocaleString()}`
+                        ? `$${loanData.approvedAmount.toLocaleString()}`
                         : "Pending"
                       }
                     </p>
@@ -342,7 +342,7 @@ export default function LoanStatus() {
                   </div>
                   <div>
                     <p className="text-gray-600">Monthly Payment</p>
-                    <p className="font-semibold">₦{loanData.monthlyPayment.toLocaleString()}</p>
+                    <p className="font-semibold">${loanData.monthlyPayment.toLocaleString()}</p>
                   </div>
                 </div>
               </CardContent>

@@ -52,7 +52,7 @@ export default function BusinessCardsPage() {
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/placeholder.svg?key=business-credit-cards"
+                  src="https://i.pinimg.com/1200x/bf/65/af/bf65af58dff266620fff7a4efbef71a0.jpg"
                   alt="Business credit cards"
                   className="w-full h-auto"
                 />

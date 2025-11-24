@@ -71,7 +71,7 @@ export default function LoanMetrics({ stats }: LoanMetricsProps) {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <MetricCard
         title="Total Portfolio"
-        value={`₦${(stats.totalPortfolio / 1000000).toFixed(1)}M`}
+        value={`$${(stats.totalPortfolio / 1000000).toFixed(1)}M`}
         subtitle={`${stats.totalLoans} total loans`}
         icon={DollarSign}
         trend="up"

@@ -58,7 +58,7 @@ export default function BusinessLoansPage() {
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/placeholder.svg?key=business-handshake-deal"
+                  src="https://i.pinimg.com/736x/ca/63/7a/ca637abe4b5c89b67bbe46328cf176b1.jpg"
                   alt="Business handshake"
                   className="w-full h-auto"
                 />

@@ -103,7 +103,7 @@ export default function LoanList({ loans, isLoading, onStatusUpdate, onDisburse 
                   <div className="flex items-center space-x-4 text-sm text-gray-600">
                     <span className="font-mono">{loan.applicationId}</span>
                     <span>{loan.member.email}</span>
-                    <span>₦{loan.loanAmount.toLocaleString()}</span>
+                    <span>${loan.loanAmount.toLocaleString()}</span>
                     <span>{new Date(loan.applicationDate).toLocaleDateString()}</span>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export default function LoanList({ loans, isLoading, onStatusUpdate, onDisburse 
               <div className="mt-2 pt-2 border-t border-gray-100">
                 <div className="flex items-center space-x-4 text-sm text-gray-600">
                   <span>
-                    <strong>Approved:</strong> ₦{loan.approvedAmount.toLocaleString()}
+                    <strong>Approved:</strong> ${loan.approvedAmount.toLocaleString()}
                   </span>
                   <span>
                     <strong>Interest:</strong> {loan.interestRate}%

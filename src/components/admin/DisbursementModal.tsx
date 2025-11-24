@@ -83,7 +83,7 @@ export default function DisbursementModal({ open, onOpenChange, loan, onDisburse
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="disbursementAmount">Disbursement Amount (₦)</Label>
+              <Label htmlFor="disbursementAmount">Disbursement Amount ($)</Label>
               <Input
                 id="disbursementAmount"
                 type="number"

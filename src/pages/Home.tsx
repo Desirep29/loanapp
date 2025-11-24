@@ -24,32 +24,31 @@ const actions = [
   {
     icon: FileText,
     label: "Open Checking",
-    href: "/checking",
+   
   },
   {
     icon: PiggyBank,
     label: "Open Savings",
-    href: "/savings",
+
   },
   {
     icon: CreditCard,
     label: "Credit Card",
-    href: "/credit-card",
+  
   },
   {
     icon: House,
     label: "Mortgage",
-    href: "/mortgage",
+  
   },
   {
     icon: Car,
     label: "Auto Loan",
-    href: "/auto-loan",
   },
   {
     icon: Building2,
     label: "Business Loan",
-    href: "/business-loan",
+   
   },
 ];
 
@@ -275,9 +274,8 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
             {actions.map((action) => (
-              <Link
+              <div
                 key={action.label}
-                to={action.href}
                 className="group relative bg-white rounded-xl border border-gray-200 hover:border-[#006064] hover:shadow-lg transition-all duration-300 p-4 text-center"
               >
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#B8D430]/10 flex items-center justify-center group-hover:bg-[#B8D430]/20 transition-colors mx-auto mb-3">
@@ -286,7 +284,7 @@ const Home: React.FC = () => {
                 <span className="text-xs sm:text-sm font-medium text-gray-700 group-hover:text-[#006064] line-clamp-2">
                   {action.label}
                 </span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

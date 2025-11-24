@@ -149,7 +149,7 @@ export default function CareersPage() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/team-collaboration.jpg"
+                    src="https://i.pinimg.com/736x/6a/7a/15/6a7a150b675aeb0ed2b1995aa74ceb25.jpg"
                     alt="Team working together"
                     className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                   />
@@ -236,7 +236,7 @@ export default function CareersPage() {
               <div className="relative order-2 lg:order-1">
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/employee-benefits.jpg"
+                    src="https://i.pinimg.com/736x/15/ef/9a/15ef9ab4a90b9202b976b66765175f3d.jpg"
                     alt="Employee benefits"
                     className="w-full h-64 sm:h-80 object-cover rounded-xl"
                   />

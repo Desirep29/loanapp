@@ -53,7 +53,7 @@ export default function BusinessSavingsPage() {
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/placeholder.svg?key=business-growth-chart"
+                  src="https://i.pinimg.com/1200x/b1/62/f1/b162f169da5d256a73af82de6ff9bbe3.jpg"
                   alt="Business growth"
                   className="w-full h-auto"
                 />

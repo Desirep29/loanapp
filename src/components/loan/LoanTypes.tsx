@@ -22,7 +22,7 @@ const loanProducts = [
     icon: Home,
     title: "Mortgage Loans",
     description: "Finance your dream home with competitive rates",
-    features: ["Up to ₦100M", "30-year terms", "Fixed & adjustable rates"],
+    features: ["Up to $100M", "30-year terms", "Fixed & adjustable rates"],
     interestRate: "6.5% - 8.5%",
     processingTime: "10-14 days",
     bestFor: "Home buyers and homeowners"
@@ -31,7 +31,7 @@ const loanProducts = [
     icon: Car,
     title: "Auto Loans",
     description: "Get behind the wheel of your new vehicle",
-    features: ["Up to ₦20M", "84-month terms", "New & used vehicles"],
+    features: ["Up to $20M", "84-month terms", "New & used vehicles"],
     interestRate: "5.9% - 9.9%",
     processingTime: "2-3 days",
     bestFor: "Vehicle purchases"
@@ -40,7 +40,7 @@ const loanProducts = [
     icon: GraduationCap,
     title: "Education Loans",
     description: "Invest in your future with education financing",
-    features: ["Up to ₦10M", "Deferred payments", "School certified"],
+    features: ["Up to $10M", "Deferred payments", "School certified"],
     interestRate: "4.5% - 7.5%",
     processingTime: "5-7 days",
     bestFor: "Students and parents"
@@ -49,7 +49,7 @@ const loanProducts = [
     icon: Briefcase,
     title: "Business Loans",
     description: "Grow your business with flexible financing",
-    features: ["Up to ₦50M", "Working capital", "Equipment financing"],
+    features: ["Up to $50M", "Working capital", "Equipment financing"],
     interestRate: "8.5% - 12.5%",
     processingTime: "5-7 days",
     bestFor: "Business owners"
@@ -58,7 +58,7 @@ const loanProducts = [
     icon: Heart,
     title: "Personal Loans",
     description: "Flexible loans for your personal needs",
-    features: ["Up to ₦5M", "No collateral", "Quick approval"],
+    features: ["Up to $5M", "No collateral", "Quick approval"],
     interestRate: "10.5% - 15.5%",
     processingTime: "1-2 days",
     bestFor: "Various personal expenses"
@@ -67,7 +67,7 @@ const loanProducts = [
     icon: Zap,
     title: "Emergency Loans",
     description: "Quick funds for unexpected situations",
-    features: ["Up to ₦2M", "Same-day funding", "Minimal paperwork"],
+    features: ["Up to $2M", "Same-day funding", "Minimal paperwork"],
     interestRate: "12.0% - 18.0%",
     processingTime: "24 hours",
     bestFor: "Urgent financial needs"

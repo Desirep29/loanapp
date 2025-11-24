@@ -121,7 +121,7 @@ export default function PaymentInstructions() {
                   <label className="text-sm font-medium text-gray-500">Amount</label>
                   <div className="flex items-center justify-between mt-1">
                     <span className="text-2xl font-bold text-[#006064]">
-                      ₦{paymentInfo.amount.toLocaleString()}
+                      ${paymentInfo.amount.toLocaleString()}
                     </span>
                   </div>
                 </div>

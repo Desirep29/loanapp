@@ -101,7 +101,7 @@ export default function ContactUsPage() {
               <div className="relative order-2 lg:order-1">
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/customer-service-representative.jpg"
+                    src="https://i.pinimg.com/736x/0b/ca/07/0bca07a38e76b910d8096ea128406d26.jpg"
                     alt="Customer service representative"
                     className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                   />
@@ -456,7 +456,7 @@ export default function ContactUsPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                  className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
                 >
                   Schedule a Consultation
                 </Button>

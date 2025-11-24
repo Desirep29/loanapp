@@ -243,7 +243,7 @@ export default function LoanPaymentInstructions() {
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-600">Upfront Payment</p>
                     <p className="text-lg font-bold text-[#006064]">
-                      ₦{loanData.upfrontPaymentAmount.toLocaleString()}
+                      ${loanData.upfrontPaymentAmount.toLocaleString()}
                     </p>
                   </div>
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
@@ -297,7 +297,7 @@ export default function LoanPaymentInstructions() {
                           </div>
                           <div className="text-right">
                             <p className="text-lg font-bold text-[#006064]">
-                              ₦{account.amount.toLocaleString()}
+                              ${account.amount.toLocaleString()}
                             </p>
                             <p className="text-xs text-gray-500 capitalize">
                               {account.type.replace("_", " ")}

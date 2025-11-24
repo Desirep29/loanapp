@@ -42,8 +42,8 @@ Account Status: ${accountInfo?.accountStatus}
 Activated: ${new Date(accountInfo?.activatedAt || "").toLocaleDateString()}
 
 Account Balances:
-- Checking: ₦${accountInfo?.balance.checking.toLocaleString()}
-- Savings: ₦${accountInfo?.balance.savings.toLocaleString()}
+- Checking: $${accountInfo?.balance.checking.toLocaleString()}
+- Savings: $${accountInfo?.balance.savings.toLocaleString()}
 
 Welcome to First International Financial Services!
     `.trim();
@@ -108,7 +108,7 @@ Welcome to First International Financial Services!
 
               <div className="p-4 bg-blue-50 rounded-lg">
                 <div className="text-2xl font-bold text-[#006064] mb-2">
-                  ₦{accountInfo.balance.checking.toLocaleString()}
+                  ${accountInfo.balance.checking.toLocaleString()}
                 </div>
                 <p className="text-sm text-gray-600">Opening Balance</p>
               </div>

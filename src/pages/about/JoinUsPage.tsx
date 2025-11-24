@@ -125,7 +125,7 @@ export default function JoinUsPage() {
               <div className="relative order-1 lg:order-2">
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/happy-members-family.jpg"
+                    src="https://i.pinimg.com/736x/0f/dd/95/0fdd956e9d3941cb73d637e5da6cfbd3.jpg"
                     alt="Happy members"
                     className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                   />
@@ -234,7 +234,7 @@ export default function JoinUsPage() {
               <div className="relative order-1 lg:order-2">
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/member-benefits-illustration.jpg"
+                    src="https://i.pinimg.com/736x/db/da/ba/dbdabae40bcec9ad072a66fe4e026e03.jpg"
                     alt="Member benefits"
                     className="w-full h-64 sm:h-80 object-cover rounded-xl"
                   />
@@ -406,7 +406,7 @@ export default function JoinUsPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3 text-lg"
+                  className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3 text-lg"
                 >
                   Compare Our Rates →
                 </Button>

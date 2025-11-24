@@ -161,7 +161,7 @@ export default function RecentLoans({ loans, onStatusUpdate, onDisburse }: Recen
                 </div>
                 <div className="flex items-center space-x-4 text-xs text-gray-600">
                   <span className="font-mono">{getApplicationId(loan)}</span>
-                  <span>₦{loan.loanAmount?.toLocaleString() || '0'}</span>
+                  <span>${loan.loanAmount?.toLocaleString() || '0'}</span>
                   <span>{loan.applicationDate ? new Date(loan.applicationDate).toLocaleDateString() : 'Unknown date'}</span>
                 </div>
               </div>

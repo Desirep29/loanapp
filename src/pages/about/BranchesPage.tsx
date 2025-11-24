@@ -130,7 +130,7 @@ export default function BranchesPage() {
               <div className="relative order-1 lg:order-2">
                 <div className="bg-gradient-to-br from-[#006064] to-[#004d50] rounded-2xl p-1">
                   <img
-                    src="/bismarck-cityscape.jpg"
+                    src="https://i.pinimg.com/736x/5e/1f/c5/5e1fc527300ea1a0f6803b2b6252ff97.jpg"
                     alt="Bismarck cityscape"
                     className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl"
                   />
@@ -303,7 +303,7 @@ export default function BranchesPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#006064] px-8 py-3"
+                  className="border-white text-[#006064] hover:bg-white hover:text-[#006064] px-8 py-3"
                 >
                   Contact Us First
                 </Button>

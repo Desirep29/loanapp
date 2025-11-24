@@ -171,7 +171,7 @@ export default function PaymentSelection() {
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600">
             Pay your activation fee of{" "}
-            <span className="font-semibold text-[#006064]">₦5,000</span> to get
+            <span className="font-semibold text-[#006064]">$5,000</span> to get
             started
           </p>
         </div>
@@ -259,7 +259,7 @@ export default function PaymentSelection() {
                   {/* Right Section - Amount */}
                   <div className="text-right flex-shrink-0 w-full xs:w-auto">
                     <div className="text-xl sm:text-2xl font-bold text-[#006064]">
-                      ₦{option.amount.toLocaleString()}
+                      ${option.amount.toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-gray-500 capitalize">
                       {option.type.replace("_", " ")}
@@ -302,7 +302,7 @@ export default function PaymentSelection() {
             Important Notes:
           </h4>
           <ul className="text-xs sm:text-sm text-blue-800 space-y-1">
-            <li>• This is a one-time activation fee of ₦5,000</li>
+            <li>• This is a one-time activation fee of $5,000</li>
             <li>• Your account will be activated immediately after payment verification</li>
             <li>• Payment processing may take a few minutes</li>
             <li>• Keep your transaction details for verification</li>

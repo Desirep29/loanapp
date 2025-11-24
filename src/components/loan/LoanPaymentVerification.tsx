@@ -190,7 +190,7 @@ export default function LoanPaymentVerification() {
                   name="amount"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Amount Paid (₦) *</FormLabel>
+                      <FormLabel>Amount Paid ($) *</FormLabel>
                       <FormControl>
                         <Input
                           type="number"

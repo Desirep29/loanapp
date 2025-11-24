@@ -111,7 +111,7 @@ export default function StatusModal({ open, onOpenChange, loan, onStatusUpdate }
               <p><strong>Application ID:</strong> {getApplicationIdentifier(loan)}</p>
               <p><strong>Member:</strong> {getMemberName(loan)}</p>
               <p><strong>Email:</strong> {loan?.memberId?.email || loan?.email || 'No email'}</p>
-              <p><strong>Loan Amount:</strong> ₦{loan?.loanAmount?.toLocaleString() || '0'}</p>
+              <p><strong>Loan Amount:</strong> ${loan?.loanAmount?.toLocaleString() || '0'}</p>
               <p><strong>Loan Type:</strong> {loan?.loanType ? loan.loanType.replace('_', ' ') : 'Unknown'}</p>
               <p><strong>Current Status:</strong> {loan?.status || 'Unknown'}</p>
             </div>

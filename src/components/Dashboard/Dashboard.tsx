@@ -109,7 +109,7 @@ export default function Dashboard() {
                     <p className="text-sm font-medium">Account Activation</p>
                     <p className="text-xs text-gray-500">Today</p>
                   </div>
-                  <p className="text-sm font-semibold text-green-600">+₦1,000.00</p>
+                  <p className="text-sm font-semibold text-green-600">+$1,000.00</p>
                 </div>
                 
                 <div className="text-center py-3">
