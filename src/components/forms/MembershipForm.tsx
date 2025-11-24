@@ -1,8 +1,7 @@
-// components/Auth/RegistrationForm.tsx
-"use client";
-
+import { z } from "zod";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, type Resolver } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -25,28 +24,59 @@ import { toast } from "react-toastify";
 import { Loader2, ArrowLeft, ArrowRight, Upload, X } from "lucide-react";
 import { becomeMember } from "@/service/apiCall";
 
-interface RegistrationFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  dateOfBirth: string;
-  address: {
-    street: string;
-    city: string;
-    state: string;
-    zip: string;
-    country: string;
-  };
-  occupation: string;
-  annualIncome: number;
-  governmentId: string;
-  openingDeposit: number;
-  accountType: "checking" | "savings" | "both";
-  ssn: string;
-  password: string;
-  confirmPassword: string;
-}
+const getMaxDateFor18 = () => {
+  const date = new Date();
+  date.setFullYear(date.getFullYear() - 18);
+  return date.toISOString().split("T")[0];
+};
+
+// Full Zod Schema with ALL validations
+const formSchema = z
+  .object({
+    firstName: z.string().min(2, "First name must be at least 2 characters"),
+    lastName: z.string().min(2, "Last name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email address"),
+    phone: z
+      .string()
+      .regex(/^[+]?[0-9]{10,15}$/, "Invalid phone number (e.g., +1234567890)"),
+
+    dateOfBirth: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date")
+      .refine((date) => {
+        const birthDate = new Date(date);
+        const eighteenYearsAgo = new Date();
+        eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+        return birthDate <= eighteenYearsAgo;
+      }, "You must be at least 18 years old"),
+
+    ssn: z
+      .string()
+      .regex(/^\d{3}-\d{2}-\d{4}$/, "SSN must be in format: 123-45-6789"),
+
+    address: z.object({
+      street: z.string().min(5, "Street address is required"),
+      city: z.string().min(2, "City is required"),
+      state: z.string().length(2, "State must be 2 letters (e.g., NY)"),
+      zip: z.string().regex(/^\d{5}$/, "ZIP code must be 5 digits"),
+      country: z.string(),
+    }),
+
+    occupation: z.string().min(2, "Occupation is required"),
+    annualIncome: z.coerce.number().min(0, "Income cannot be negative"),
+    governmentId: z.string().min(5, "Government ID is required"),
+    openingDeposit: z.coerce.number().min(25, "Minimum opening deposit is $25"),
+    accountType: z.enum(["checking", "savings", "both"]),
+
+    password: z.string().min(8, "Password must be at least 8 characters"),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
+
+type FormData = z.infer<typeof formSchema>;
 
 export function RegistrationForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -57,13 +87,17 @@ export function RegistrationForm() {
     driversLicense?: File;
   }>({});
 
-  const form = useForm<RegistrationFormData>({
+  const maxDate18 = getMaxDateFor18(); // For date input max
+
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema) as Resolver<FormData>,
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
       phone: "",
       dateOfBirth: "",
+      ssn: "",
       address: {
         street: "",
         city: "",
@@ -76,7 +110,6 @@ export function RegistrationForm() {
       governmentId: "",
       openingDeposit: 25,
       accountType: "checking",
-      ssn: "",
       password: "",
       confirmPassword: "",
     },
@@ -149,15 +182,9 @@ export function RegistrationForm() {
     }
   };
 
-  const onSubmit = async (data: RegistrationFormData) => {
+  const onSubmit = async (data: FormData) => {
     setIsLoading(true);
     try {
-      if (data.password !== data.confirmPassword) {
-        form.setError("confirmPassword", { message: "Passwords don't match" });
-        setIsLoading(false);
-        return;
-      }
-
       const requiredDocs = ["birthCertificate", "passport", "driversLicense"];
       const missingDocs = requiredDocs.filter(
         (doc) => !uploadedFiles[doc as keyof typeof uploadedFiles]
@@ -215,7 +242,6 @@ export function RegistrationForm() {
       setTimeout(() => {
         window.location.href = "/verify-email";
       }, 1000);
-      
     } catch (error) {
       console.error("Registration error:", error);
       toast.error(
@@ -495,6 +521,7 @@ export function RegistrationForm() {
                           <Input
                             type="date"
                             {...field}
+                            max={maxDate18}
                             required
                             className="h-10 sm:h-11 text-sm sm:text-base"
                           />

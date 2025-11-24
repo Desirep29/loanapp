@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { AccountModal } from "./AccountModal";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/redux/store";
+import LoginModal from "../forms/LoginModal";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -27,15 +28,26 @@ export function Header() {
   const [mobileBusinessOpen, setMobileBusinessOpen] = useState<boolean>(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState<boolean>(false);
   const [isAccountModalOpen, setIsAccountModalOpen] = useState<boolean>(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
 
   const aboutTimeoutRef = useRef<number | null>(null);
   const personalTimeoutRef = useRef<number | null>(null);
   const businessTimeoutRef = useRef<number | null>(null);
 
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+    setIsMobileMenuOpen(false); // close mobile menu when opening modal
+  };
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
   const openAccountModal = () => {
     setIsAccountModalOpen(true);
     setIsMobileMenuOpen(false); // close mobile menu when opening modal
   };
+
   const closeAccountModal = () => setIsAccountModalOpen(false);
   // About dropdown handlers
   const handleAboutMouseEnter = (): void => {
@@ -454,7 +466,7 @@ export function Header() {
                   <span className="font-medium -mt-1">for a Loan</span>
                 </Link>
                 <Link
-                  to="/appointment"
+                  to="/about/our-team"
                   className="flex flex-col items-center gap-1 text-[#006064] hover:text-[#004d50] text-xs"
                 >
                   <Calendar className="h-5 w-5" />
@@ -469,7 +481,7 @@ export function Header() {
                     {firstName}
                   </Link>
                 ) : (
-                  <button className="bg-[#006064] hover:bg-[#004d50] text-white h-auto py-6 px-6 flex flex-col items-center gap-1 rounded-md">
+                  <button   onClick={openLoginModal}  className="bg-[#006064] hover:bg-[#004d50] text-white h-auto py-6 px-6 flex flex-col items-center gap-1 rounded-md">
                     <Lock className="h-5 w-5" />
                     <span className="font-medium">Login</span>
                   </button>
@@ -703,7 +715,7 @@ export function Header() {
                       <span>Apply for a Loan</span>
                     </Link>
                     <Link
-                      to="/appointment"
+                      to="/about/our-team"
                       className="flex items-center gap-2 text-[#006064] hover:text-[#004d50] font-medium py-3"
                       onClick={handleLinkClick}
                     >
@@ -721,7 +733,7 @@ export function Header() {
                     ) : (
                       <button
                         className="bg-[#006064] hover:bg-[#004d50] text-white py-3 px-4 flex items-center gap-2 rounded-md w-full justify-center mt-2"
-                        onClick={handleLinkClick}
+                      onClick={openLoginModal} 
                       >
                         <Lock className="h-5 w-5" />
                         <span className="font-medium">Login</span>
@@ -735,6 +747,7 @@ export function Header() {
         </div>
       </header>
       <AccountModal isOpen={isAccountModalOpen} onClose={closeAccountModal} />
+      <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />
     </>
   );
 }
