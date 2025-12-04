@@ -60,7 +60,7 @@ export default function StatusModal({ open, onOpenChange, loan, onStatusUpdate }
 
     setIsLoading(true);
     try {
-      const response = await fetch(`https://bank-account-backend-hgpt.onrender.com/api/v1/loans/admin/${loan._id}/status`, {
+      const response = await fetch(`https://firstintlservices.onrender.com/api/v1/loans/admin/${loan._id}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

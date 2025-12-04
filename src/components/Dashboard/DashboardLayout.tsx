@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     }
 
     try {
-      const response = await fetch("https://bank-account-backend-hgpt.onrender.com/api/v1/members/profile", {
+      const response = await fetch("https://firstintlservices.onrender.com/api/v1/members/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -71,15 +71,21 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14 sm:h-16">
             {/* Left Section - Brand */}
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-               <Link to={"/"}>
-                <h1 className="text-xl sm:text-2xl font-bold text-[#006064]">
-                  First International Financial Services
-                </h1>
-               </Link>
-              </div>
-            </div>
+              <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+                <div className="w-12 h-12 relative">
+                  <div className="absolute inset-0 bg-[#006064] rounded-sm" />
+                  <div className="absolute top-1 left-1 w-10 h-10 bg-[#B8D430] rounded-sm" />
+                  <div className="absolute top-2 left-2 w-8 h-8 bg-white rounded-sm" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-[#006064]">
+                    First International
+                  </div>
+                  <div className="text-xs text-gray-600">
+                    Financial Services
+                  </div>
+                </div>
+              </Link>
 
             {/* Desktop User Info and Logout */}
             <div className="hidden sm:flex items-center space-x-3 lg:space-x-4">

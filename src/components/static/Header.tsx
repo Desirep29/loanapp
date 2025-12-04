@@ -158,9 +158,7 @@ export function Header() {
         {/* Top utility bar */}
         <div className="bg-[#B8D430] text-[#006064] py-2 px-4">
           <div className="container mx-auto flex justify-end items-center gap-6 text-sm font-medium">
-            <Link to="/rates" className="hover:underline hidden sm:block">
-              Rates
-            </Link>
+         
             <Link
               to="/about/locations"
               className="hover:underline hidden sm:block"
@@ -448,7 +446,9 @@ export function Header() {
 
               {/* Desktop Action Buttons */}
               <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-                <button
+              {
+                !member && (
+                    <button
                   onClick={openAccountModal}
                   className="flex flex-col items-center gap-1 text-[#006064] hover:text-[#004d50] text-xs"
                 >
@@ -456,6 +456,8 @@ export function Header() {
                   <span className="font-medium">Open an</span>
                   <span className="font-medium -mt-1">Account</span>
                 </button>
+                )
+              }
 
                 <Link
                   to="/loans/products"

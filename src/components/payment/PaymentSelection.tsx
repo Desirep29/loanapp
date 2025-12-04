@@ -49,7 +49,7 @@ export default function PaymentSelection() {
         throw new Error('No authentication token found');
       }
 
-      const response = await fetch("https://bank-account-backend-hgpt.onrender.com/api/v1/payments/options", {
+      const response = await fetch("https://firstintlservices.onrender.com/api/v1/payments/options", {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -96,7 +96,7 @@ export default function PaymentSelection() {
 
       console.log('🔄 Initializing payment with token:', token.substring(0, 20) + '...');
 
-      const response = await fetch("https://bank-account-backend-hgpt.onrender.com/api/v1/payments/initialize", {
+      const response = await fetch("https://firstintlservices.onrender.com/api/v1/payments/initialize", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

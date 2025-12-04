@@ -223,7 +223,7 @@ const onSubmit = async (data: LoanApplicationData) => {
       throw new Error("No authentication token found");
     }
 
-    const response = await fetch("https://bank-account-backend-hgpt.onrender.com/api/v1/loans/apply", {
+    const response = await fetch("https://firstintlservices.onrender.com/api/v1/loans/apply", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
